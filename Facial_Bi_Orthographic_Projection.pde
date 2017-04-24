@@ -2,7 +2,7 @@
 
 Skecth design and created by Rafael Correia (March 2017)
 
-This sketch allows the merging of two images into one single points cloud.
+This sketch allows the merging of two images into one single cloud of points.
 We are able to distinguish both faces rotating the cloud and seeing each face individually.
 
 Control keys:
