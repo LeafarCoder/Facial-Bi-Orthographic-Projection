@@ -64,8 +64,8 @@ int focal_dist = 2000;
 void setup() {
   // The images must be on the same directory as the skecth:
   // Images with a similar width/length ratio are preferable.
-  img_1 = loadImage("obama.jpg");
-  img_2 = loadImage("brad_pitt.jpg");
+  img_1 = loadImage("obama_original.jpg");
+  img_2 = loadImage("brad_pitt_original.jpg");
   
   size(800,700,P3D);
   frameRate(1000);
