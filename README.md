@@ -12,7 +12,7 @@ Here is a showcase of the simulation (around 2 minutes):
 
 As more points are added to the 3D cloud, the faces become more perceptible.
 
-| Original image used | Few points | More points |
-:----:|:------:|:-----:
-<img src="/screenshots/brad_pitt_original.jpg" width="250"/>  | <img src="/screenshots/brad_pitt.PNG" width="250"/> | <img src="/screenshots/brad_pitt2.PNG" width="250"/>
-<img src="/screenshots/obama_original.jpg" width="250"/>  | <img src="/screenshots/obama.PNG" width="250"/> | <img src="/screenshots/obama2.PNG" width="250"/> 
+| Original image used | Few points | More points | Overlay |
+:----:|:------:|:-----:|:----:
+<img src="/screenshots/brad_pitt_original.jpg" width="200"/>  | <img src="/screenshots/brad_pitt.PNG" width="230"/> | <img src="/screenshots/brad_pitt2.PNG" width="230"/>| <img src="/screenshots/brad_pitt_pic.PNG" width="230"/>
+<img src="/screenshots/obama_original.jpg" width="200"/>  | <img src="/screenshots/obama.PNG" width="230"/> | <img src="/screenshots/obama2.PNG" width="230"/>  | <img src="/screenshots/obama_pic.PNG" width="230"/> 
