@@ -2,12 +2,15 @@
 
 Skecth design and created by Rafael Correia (March 2017)
 
-This sketch allows the merging of two images into one single cloud of points.
+This sketch allows the merging of two images into one single points cloud.
 We are able to distinguish both faces rotating the cloud and seeing each face individually.
 
 Control keys:
 1 - Toggle image 1
 2 - Toggle image 2
+UP - Decrease skip amount
+DOWN - Increase skip amount
+ENTER - pause/resume simulation
 R - Reset sketch
 N - Align cloud to see image 1
 M - Align cloud to see image 2
@@ -52,23 +55,24 @@ int sphere_radius = 8;
 int current_point;
 // sample of random spheres from which we pick a winning one
 int sample_pool = 8;
+int skip_amount = 1;
 
 // min_span and max_span are the that tell us the range in which we can draw a sphere in the z axis according to the sphere's x and y coordinate.
 // This relates to prespective issues. 
 int min_span, max_span;
 
 // how far away the camera is from the center of the point cloud.
-int focal_dist = 2000;
+int focal_dist = 1500;
 
 
 void setup() {
   // The images must be on the same directory as the skecth:
   // Images with a similar width/length ratio are preferable.
-  img_1 = loadImage("obama_original.jpg");
-  img_2 = loadImage("brad_pitt_original.jpg");
+  img_1 = loadImage("brad_pitt_original.jpg");
+  img_2 = loadImage("obama_original.jpg");
   
-  size(800,700,P3D);
-  frameRate(1000);
+  size(700,600,P3D);
+  frameRate(500);
   
   initialize();
 }
@@ -218,11 +222,8 @@ void draw(){
         
         r_z_ = (int)random(min_span, max_span);
         
-        //println(r_z_);
-        
         frx_ = frx - (frx * r_z_ / focal_dist);
         fry_ = fry - (fry * r_z_ / focal_dist);
-        //println("-> "+frx+","+fry);
         
         PVector line4 = new PVector(gen_cam.x, gen_cam.y, gen_cam.z);
   
@@ -257,11 +258,12 @@ void draw(){
   }
   
   //to compute faster uncomment this (don't forget to uncomment the closing bracket):
-  //if(frameCount % 50 == 0){
+  if(frameCount % skip_amount == 0){
+    println(skip_amount);
     background(255);
     drawSpheres();
     drawImages();
-  //}
+  }
   
   rotate_camera();
   camera_check();
@@ -352,6 +354,17 @@ void keyPressed(){
   
   if(key == '2'){
     show_img_2 = !show_img_2;
+  }
+  
+  if(key == CODED){
+    if(keyCode == UP){
+      skip_amount += 10;
+    }
+    
+    if(keyCode == DOWN){
+      skip_amount -= 10;
+      if(skip_amount < 1){skip_amount = 1;}
+    }
   }
   
   if(key == 'n' || key == 'N'){
