@@ -8,7 +8,9 @@ Project done around April 2017.
 
 Here is a showcase of the simulation (around 2 minutes):
 
-![](/screenshots/showcase.gif)
+<p align="center">
+  ![](/screenshots/showcase.gif)
+</p>
 
 As more points are added to the 3D cloud, the faces become more perceptible.
 
