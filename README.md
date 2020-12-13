@@ -14,5 +14,5 @@ As more points are added to the 3D cloud, the faces become more perceptible.
 
 | Original image used | Few points | More points |
 :----:|:------:|:-----:
-<img src="/screenshots/brad_pitt_original.PNG" width="250"/>  | <img src="/screenshots/brad_pitt.PNG" width="250"/> | <img src="/screenshots/brad_pitt2.PNG" width="250"/>
-<img src="/screenshots/obama_original.PNG" width="250"/>  | <img src="/screenshots/obama.PNG" width="250"/> | <img src="/screenshots/obama2.PNG" width="250"/> 
+<img src="/screenshots/brad_pitt_original.jpg" width="250"/>  | <img src="/screenshots/brad_pitt.PNG" width="250"/> | <img src="/screenshots/brad_pitt2.PNG" width="250"/>
+<img src="/screenshots/obama_original.jpg" width="250"/>  | <img src="/screenshots/obama.PNG" width="250"/> | <img src="/screenshots/obama2.PNG" width="250"/> 
